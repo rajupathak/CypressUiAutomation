@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Cypress.Commands.add("xpath", (xpath, options) => {
+//   cy.document().then((doc) => {
+//     const results = doc.evaluate(xpath, doc, null, XPathResult.ANY_TYPE, null);
+//     const elements = [];
+//     let element = results.iterateNext();
+//     while (element) {
+//       elements.push(element);
+//       element = results.iterateNext();
+//     }
+//     return cy.wrap(elements, options);
+//   });
+// });

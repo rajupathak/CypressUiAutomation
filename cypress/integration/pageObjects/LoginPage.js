@@ -97,16 +97,13 @@ class LoginPage extends Page {
 
     // Add a short delay to allow menu items to load
 
-    this.loginStatusMenuItems.each((element) => {
-      const elementText = element.text().trim();
+    this.loginStatusMenuItems.each(($element) => {
+      const elementText = $element.text().trim();
       if (_.isEqual(elementText, status)) {
         cy.log("Element Text is ", elementText);
         cy.log("inside if check");
-        cy.log("Element is ", element);
-
-        // Scroll the element into view before clicking
-        cy.wrap(element).click({ force: true });
-
+        cy.log("Element is ", $element);
+        cy.wrap($element).click({ force: true });
         return false; // Exit the loop once found
       }
     });
