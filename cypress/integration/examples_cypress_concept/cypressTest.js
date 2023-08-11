@@ -12,6 +12,7 @@ describe("My First Test Suite", function () {
     cy.get(".products").as("productLocator");
     cy.get("@productLocator").find(".product").should("have.length", 4);
     cy.get(":nth-child(3) > .product-action > button").click();
+    //eq is used to pass the index
     cy.get("@productLocator")
       .find(".product")
       .eq(2)

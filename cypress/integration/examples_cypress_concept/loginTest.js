@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 import LoginPage from "../pageObjects/LoginPage";
-import { username, password, status } from "./../../fixtures/example.json";
+import { username, password, status } from "../../fixtures/example.json";
 describe(`This is the first Cypress test suite`, () => {
   it(`Verifies the login test`, async () => {
     await cy.visit("https://st-test4.iris.cwp.pnp-hcl.com/chat/login");
