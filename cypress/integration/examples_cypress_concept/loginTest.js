@@ -3,7 +3,7 @@ import LoginPage from "../pageObjects/LoginPage";
 import { username, password, status } from "../../fixtures/example.json";
 describe(`This is the first Cypress test suite`, () => {
   it(`Verifies the login test`, async () => {
-    await cy.visit("https://st-test4.iris.cwp.pnp-hcl.com/chat/login");
+    await cy.visit(Cypress.env("url"));
     // Wait for the elements to be visible before proceeding
     await LoginPage.usernameInput.should("be.visible");
     await LoginPage.passwordInput.should("be.visible");

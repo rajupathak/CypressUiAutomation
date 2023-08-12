@@ -1,0 +1,18 @@
+.DS_Store
+**/build/*
+**/logs/*
+**/node_modules/*
+**/certs/*
+bld.log
+
+/**/*/coverage/
+**/__image_snapshots__/
+lwp/chat-client.react/storybook-static/
+
+# System Files
+jestTestResults.json
+browserstack.err
+
+# Local history extension VSCode
+.history
+
